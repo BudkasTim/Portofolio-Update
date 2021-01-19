@@ -41,8 +41,7 @@ ul{
 	list-style: none;
 }
 .s1{
-	/* background-color: var(--mainColor);
-	border-bottom:1px solid var(--borderColor); */
+
 	background-color: #eaeaea;
 	border-bottom:1px solid #c1c1c1;
 	overflow:auto;
@@ -78,7 +77,6 @@ ul{
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em 30em;
 	grid-template-areas: 
 		'nav-wrapper nav-wrapper'
 		'left-column right-column'
@@ -114,6 +112,60 @@ ul{
 	padding-top:50px;
 	padding-bottom: 50px;
 }
+#profile_picture{
+	display: block;
+	margin:0 auto;
+
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	border:2px solid #c1c1c1;
+}
+
+#theme-options-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.theme-dot{
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	border-radius: 50%;
+
+	margin: 5px;
+	border:2px solid #24292e;
+	/*shadow generator */
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	cursor: pointer;
+}
+
+
+.theme-dot:hover{
+	border-width: 5px;
+}
+
+
+#light-mode{
+	background-color: #fff;
+}
+
+#dark-mode{
+	background-color: #192734;
+}
+
+#green-mode{
+	background-color: #78866b;
+}
+#settings-note{
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
 .right-column{
 	grid-area: right-column;
 	display: grid;
@@ -121,6 +173,52 @@ ul{
 
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+#preview-shadow{
+	background-color: #f0ead6;
+	max-width: 300px;
+	height: 180px;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#preview{
+	width: 300px;
+	border:1.5px solid #17a2b8;
+	background-color: rgb(251, 249, 243, 0.8);
+	padding:15px;
+	position: relative;
+}
+
+.corner{
+	width:8px;
+	height: 8px;
+	border-radius: 50%;
+	border:1.5px solid #17a2b8;
+	background-color: #fff;
+	position: absolute;
+}
+
+#corner-tleft{
+	top:-5px;
+	left: -5px;
+}
+
+#corner-tright{
+	top:-5px;
+	right: -5px;
+}
+
+
+#corner-bright{
+	bottom:-5px;
+	right: -5px;
+}
+
+
+#corner-bleft{
+	bottom:-5px;
+	left: -5px;
 }
 .dot-wrapper{
 	display: flex;
